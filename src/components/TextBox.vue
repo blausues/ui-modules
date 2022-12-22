@@ -28,6 +28,12 @@ export default {
     initText: { type: String, default: "" },
   },
 
+  data() {
+    return {
+      textValue: this.initText,
+    };
+  },
+
   computed: {
     status() {
       if (this.textValue !== this.initText) return "modify";
@@ -36,12 +42,6 @@ export default {
     remainLen() {
       return this.maxlength - this.textValue.length;
     },
-  },
-
-  data() {
-    return {
-      textValue: this.initText,
-    };
   },
 
   methods: {
